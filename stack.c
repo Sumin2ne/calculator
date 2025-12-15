@@ -72,5 +72,7 @@ static void reallocate(Stack * stack)
 	memcpy(tmp, stack->contents, stack->size);
 	free(stack->contents);
 	stack->contents = tmp;
+	stack->size *= 2;
 }
+
 
